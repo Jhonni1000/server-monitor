@@ -46,4 +46,4 @@ jobs:
                     jhonni1000/linux-monitoring:${{ github.sha }}
             
             - name: Verify pushed image
-              run: docker pull ${{ secrets.DOCKER_USERNAME_TOKEN }}/linux-monitoring:latest
+              run: docker pull jhonni1000/linux-monitoring:latest
