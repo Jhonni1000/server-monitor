@@ -42,8 +42,8 @@ jobs:
                 file: ./Dockerfile
                 push: true
                 tags: |
-                    ${{ secrets.DOCKER_USERNAME }}/linux-monitoring:latest
-                    ${{ secrets.DOCKER_USERNAME }}/linux-monitoring:${{ github.sha }}
+                    ${{ secrets.DOCKER_USERNAME_TOKEN }}/linux-monitoring:latest
+                    ${{ secrets.DOCKER_USERNAME_TOKEN }}/linux-monitoring:${{ github.sha }}
             
             - name: Verify pushed image
-              run: docker pull ${{ secrets.DOCKERHUB_USERNAME }}/linux-monitoring:latest
+              run: docker pull ${{ secrets.DOCKER_USERNAME_TOKEN }}/linux-monitoring:latest
