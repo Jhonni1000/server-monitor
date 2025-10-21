@@ -39,7 +39,7 @@ jobs:
               uses: docker/build-push-action@v6
               with:
                 context: .
-                file: ./Dockerfile
+                file: Dockerfile
                 push: true
                 tags: |
                     ${{ secrets.DOCKER_USERNAME_TOKEN }}/linux-monitoring:latest
